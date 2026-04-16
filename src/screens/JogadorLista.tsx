@@ -14,17 +14,17 @@ const players = [
     id: '2',
     name: 'CR7',
     age: 39,
-    currentTeam: 'Al Nassr',
+    currentTeam: 'Real madrid',
     transferValue: '€30M',
     photo: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg',
   },
   {
     id: '3',
-    name: 'Neymar',
+    name: 'Neymar, Melhor do Mundo 🤚​🤪​​✋​',
     age: 32,
     currentTeam: 'Al Hilal',
-    transferValue: '€40M',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/6/65/Neymar_Jr._with_Al-Hilal%2C_24_January_2024_-_03.jpg',
+    transferValue: 'infino',
+    photo: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/01/santos-neymar_ce226e-e1738361128243.jpg?w=1200&h=1200&crop=1',
   },
   {
     id: '4',
@@ -36,11 +36,11 @@ const players = [
   },
   {
     id: '5',
-    name: 'Bruno Henrique',
+    name: 'Caça-Rato',
     age: 33,
     currentTeam: 'Flamengo',
     transferValue: '€25M',
-    photo: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Bruno_Henrique_2019.jpg',
+    photo: 'https://jpimg.com.br/uploads/2017/04/1597285979-caca-rato-comemora-gol-diante-da-portuguesa-no-caninde.jpg',
   },
 ];
 

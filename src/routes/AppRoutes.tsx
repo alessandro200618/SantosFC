@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../screens/Login';
 import PlayerListScreen from '../screens/JogadorLista';
 import PlayerDetailsScreen from '../screens/JogadorDetalhe';
+import CadastroScreen from '../screens/Cadastro';
+import SobreScreen from '../screens/Sobre';
 const PublicStack = createNativeStackNavigator();
 const PrivateStack = createNativeStackNavigator();
 function PublicRoutes({ onLogin }: any) {
@@ -13,7 +15,16 @@ function PublicRoutes({ onLogin }: any) {
         children={(props) => <LoginScreen {...props} onLogin={onLogin} />}
         options={{ title: 'Login - Santos FC' }}
       />
-      
+      <PublicStack.Screen
+        name="Register"
+        component={CadastroScreen}
+        options={{ title: 'Cadastro - Santos FC' }}
+      />
+      <PublicStack.Screen
+        name="About"
+        component={SobreScreen}
+        options={{ title: 'Sobre - Santos FC' }}
+      />
     </PublicStack.Navigator>
   );
 }
