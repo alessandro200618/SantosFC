@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../screens/Login';
 import PlayerListScreen from '../screens/JogadorLista';
 import PlayerDetailsScreen from '../screens/JogadorDetalhe';
 import CadastroScreen from '../screens/Cadastro';
 import SobreScreen from '../screens/Sobre';
+import { useAuth } from '../contexts/AuthContext';
 const PublicStack = createNativeStackNavigator();
 const PrivateStack = createNativeStackNavigator();
 function PublicRoutes({ onLogin }: any) {

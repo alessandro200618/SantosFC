@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function LoginScreen({ navigation, onLogin }: any) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { authenticateUser } = useAuth();
 
   const handleLogin = () => {
-    // Simple login, no validation
-    onLogin();
+    if (!email || !password) {
+      Alert.alert('Erro', 'Por favor, preencha email e senha');
+      return;
+    }
+    
+    if (authenticateUser(email, password)) {
+      onLogin();
+    } else {
+      Alert.alert('Erro', 'Email ou senha inválidos. Verifique se está cadastrado.');
+    }
   };
 
   return (
